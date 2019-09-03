@@ -36,12 +36,12 @@ extrautils2:xu.boomereaperang
 bibliocraft:bibliocraft.deathcompassench
 bibliocraft:bibliocraft.readingench
 gregtech:disjunction
-endercore:autosmelt
 endercore:xpboost
-enderio:repellent
-enderio:soulbound
+endercore:autosmelt
 enderio:witherweapon
-enderio:witherarrow
 enderio:shimmer
+enderio:repellent
+enderio:witherarrow
+enderio:soulbound
 enderzoo:witherarrow
 enderzoo:witherweapon

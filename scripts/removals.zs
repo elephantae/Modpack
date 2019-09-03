@@ -1,3 +1,6 @@
+#priority 500
+
+import mods.gregtech.recipe.RecipeMap;
 
 //ae2
 mods.jei.JEI.removeAndHide(<appliedenergistics2:grindstone>);
@@ -58,6 +61,7 @@ mods.jei.JEI.removeAndHide(<enderio:item_dark_steel_upgrade:0>);
 mods.jei.JEI.removeAndHide(<enderio:item_dark_steel_upgrade:1>);
 
 
+
 //steam machines
 mods.jei.JEI.removeAndHide(<gregtech:machine:1>);
 mods.jei.JEI.removeAndHide(<gregtech:machine:2>);
@@ -82,23 +86,80 @@ mods.jei.JEI.removeAndHide(<gregtech:machine:18>);
 
 //unused machines
 mods.jei.JEI.removeAndHide(<gregtech:machine:90>);
+for recipe in RecipeMap.getByName("arc_furnace").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:130>);
+for recipe in RecipeMap.getByName("brewer").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:140>);
+for recipe in RecipeMap.getByName("canner").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:180>);
+for recipe in RecipeMap.getByName("chemical_bath").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:230>);
+for recipe in RecipeMap.getByName("distillery").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:270>);
+for recipe in RecipeMap.getByName("extruder").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:280>);
+for recipe in RecipeMap.getByName("fermenter").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:290>);
+for recipe in RecipeMap.getByName("fluid_canner").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:310>);
+for recipe in RecipeMap.getByName("fluid_heater").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:330>);
+for recipe in RecipeMap.getByName("forge_hammer").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:350>);
+for recipe in RecipeMap.getByName("lathe").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:360>);
+for recipe in RecipeMap.getByName("microwave").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:370>);
+for recipe in RecipeMap.getByName("mixer").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:380>);
+for recipe in RecipeMap.getByName("orewasher").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:390>);
+for recipe in RecipeMap.getByName("packer").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:400>);
+for recipe in RecipeMap.getByName("unpacker").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:450>);
+for recipe in RecipeMap.getByName("sifter").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:460>);
+for recipe in RecipeMap.getByName("thermal_centrifuge").recipes{
+	recipe.remove();
+}
+for recipe in RecipeMap.getByName("plasma_arc_furnace").recipes{
+	recipe.remove();
+}
 mods.jei.JEI.removeAndHide(<gregtech:machine:91>);
 mods.jei.JEI.removeAndHide(<gregtech:machine:131>);
 mods.jei.JEI.removeAndHide(<gregtech:machine:141>);
