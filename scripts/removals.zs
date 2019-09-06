@@ -16,6 +16,11 @@ mods.jei.JEI.removeAndHide(<appliedenergistics2:material:46>);
 mods.jei.JEI.removeAndHide(<appliedenergistics2:material:49>);
 mods.jei.JEI.removeAndHide(<appliedenergistics2:material:51>);
 
+//prospectors
+mods.jei.JEI.removeAndHide(<prospectors:prospector_lowest>);
+mods.jei.JEI.removeAndHide(<prospectors:prospector_low>);
+mods.jei.JEI.removeAndHide(<prospectors:prospector_med>);
+mods.jei.JEI.removeAndHide(<prospectors:prospector_high>);
 
 //enderio
 mods.jei.JEI.removeAndHide(<enderio:item_material:3>);

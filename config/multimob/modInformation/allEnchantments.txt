@@ -38,10 +38,10 @@ bibliocraft:bibliocraft.readingench
 gregtech:disjunction
 endercore:xpboost
 endercore:autosmelt
-enderio:witherweapon
-enderio:shimmer
-enderio:repellent
 enderio:witherarrow
+enderio:repellent
+enderio:witherweapon
 enderio:soulbound
+enderio:shimmer
 enderzoo:witherarrow
 enderzoo:witherweapon
