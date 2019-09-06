@@ -3,7 +3,7 @@
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.material.MaterialRegistry;
 import crafttweaker.item.IItemStack;
-
+import mods.thaumcraft.ArcaneWorkbench;
 
 val assembler=RecipeMap.getByName("assembler");
 val reactor=RecipeMap.getByName("chemical_reactor");
@@ -112,6 +112,13 @@ recipes.addShaped(<gregtech:machine_casing:2>,[
 	
 //chinkin nunget
 recipes.addShapeless(<thaumcraft:chunk:1>,[<minecraft:stone_pickaxe>.onlyWithTag({display:{Name:"Sticked pick",Lore:["This pick", "Has been sticked"]}})]);
+
+//basic essentia furnace
+mods.thaumcraft.ArcaneWorkbench.removeRecipe(<thaumcraft:smelter_basic>);
+mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe("smelter_basic","",50,[<aspect:aer>,<aspect:ignis>,<aspect:terra>],<thaumcraft:smelter_basic>,[
+	[<thaumcraft:plate:0>,<thaumcraft:crucible>,<thaumcraft:plate:0>],
+	[<gregtech:metal_casing:2>,<gregtech:machine:511>,<gregtech:metal_casing:2>],
+	[<erebus:umberstone:0>,<erebus:umberstone:0>,<erebus:umberstone:0>]]);
 
 //cables
 recipes.removeByRecipeName("gregtech:red_alloy_cable_1");
