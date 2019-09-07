@@ -10,6 +10,8 @@ val reactor=RecipeMap.getByName("chemical_reactor");
 val press=RecipeMap.getByName("forming_press");
 val blast_furnace=RecipeMap.getByName("blast_furnace");
 val plasma_furnace=RecipeMap.getByName("plasma_arc_furnace");
+val electrolyzer=RecipeMap.getByName("electrolyzer");
+val alloy=RecipeMap.getByName("alloy_smelter");
 
 
 //lv casing
@@ -119,6 +121,45 @@ mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe("smelter_basic","",50,[<asp
 	[<thaumcraft:plate:0>,<thaumcraft:crucible>,<thaumcraft:plate:0>],
 	[<gregtech:metal_casing:2>,<gregtech:machine:511>,<gregtech:metal_casing:2>],
 	[<erebus:umberstone:0>,<erebus:umberstone:0>,<erebus:umberstone:0>]]);
+	
+//electrical steel
+recipes.remove(<enderio:item_alloy_ingot:0>);
+recipes.addShapeless(<enderio:item_alloy_ingot:0>,[<gregtech:meta_item_1:2159>,<minecraft:iron_ingot>,<minecraft:redstone>,<gregtech:meta_tool:6>.reuse()]);
+alloy.recipeBuilder().inputs([<gregtech:meta_item_2:32440>,<minecraft:iron_ingot>]).outputs([<enderio:item_alloy_ingot:0>]).duration(20).EUt(16).buildAndRegister();
+
+//silicon dioxide
+electrolyzer.findRecipe(25,[<minecraft:sand>*8],[null]).remove();
+recipes.addShapeless(<gregtech:meta_item_1:2159>,[<minecraft:glass>,<gregtech:meta_tool:12>.reuse()]);
+
+//industrial chassis
+recipes.addShaped(<enderio:item_material:1>,[
+	[<minecraft:iron_bars>,<enderio:item_alloy_ingot:0>,<minecraft:iron_bars>],
+	[<enderio:item_alloy_ingot:0>,<enderio:item_material:0>,<enderio:item_alloy_ingot:0>],
+	[<minecraft:iron_bars>,<enderio:item_alloy_ingot:0>,<minecraft:iron_bars>]]);
+
+//simple wired charger
+recipes.remove(<enderio:block_simple_wired_charger>);
+recipes.addShaped(<enderio:block_simple_wired_charger>,[
+	[<gregtech:cable:5071>,<enderio:item_alloy_ingot:0>,<gregtech:cable:5071>],
+	[<enderio:item_alloy_ingot:0>,<enderio:item_material:0>,<enderio:item_alloy_ingot:0>],
+	[<minecraft:cobblestone>,<minecraft:cobblestone>,<minecraft:cobblestone>]]);
+	
+//simple inventory charger
+recipes.remove(<enderio:item_inventory_charger_simple>);
+recipes.addShaped(<enderio:item_inventory_charger_simple>,[
+	[<gregtech:meta_item_2:19018>,<enderio:item_alloy_ingot:0>,<gregtech:meta_item_2:19018>],
+	[<minecraft:iron_bars>,<enderio:item_basic_capacitor:0>,<minecraft:iron_bars>],
+	[<gregtech:cable:237>,<enderio:item_alloy_ingot:0>,<gregtech:cable:237>]]);
+	
+//coal dust
+recipes.addShapeless(<gregtech:meta_item_1:2106>,[<minecraft:coal>,<gregtech:meta_tool:12>.reuse()]);
+
+//scanner
+recipes.remove(<scannable:scanner>);
+recipes.addShaped(<scannable:scanner>,[
+	[<gregtech:meta_item_2:19018>,null,<gregtech:meta_item_2:19018>],
+	[<minecraft:iron_bars>,<minecraft:comparator>,<minecraft:iron_bars>],
+	[<minecraft:quartz>,<ore:circuitBasic>,<minecraft:quartz>]]);
 
 //cables
 recipes.removeByRecipeName("gregtech:red_alloy_cable_1");
